@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -8%;
+    font-size: 36px;
+    color: gainsboro; 
+    margin-bottom: 70px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    border-bottom: 2px solid #507092; 
+    padding-bottom: 10px; 
+  }
+
+/*card css start*/
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .Cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 140px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 300px;
+    height: 300px;
+  }
+
+  .card .card-body i {
+    /* Icon styles */
+    font-size: 150px; /* Increase the font size to make the icon larger */
+    color: #333; /* Example color */
+}
+
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .silver .card-header {
+    background-color: #b0c4de;
+    color: #000;
+  }
+
+  .card-body {
+    padding: 50px;
+    background-color: #b0c4de;
+  }
+
+  #link {
+    text-decoration: none;
+  }
+
+  /*card css end*/
+
+
+  /*logo css Start*/
+
+  .row {
+    display: flex;
+  }
+
+  .container-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  /*logo css end*/
+
+
+

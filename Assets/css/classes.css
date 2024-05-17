@@ -1,0 +1,321 @@
+/*---------------------
+  Class Timetable Section
+-----------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .class-timetable-section {
+      background: #151515;
+  }
+  
+  .class-timetable-section.class-details-timetable {
+      padding-top: 0;
+  }
+  
+  .class-timetable-section .section-title {
+      text-align: left;
+  }
+  
+  .class-details-timetable_title {
+    margin-bottom: 35px;
+  }
+  
+  .class-details-timetable_title h1 {
+    text-align: center;
+    margin-top: 38%;
+    font-size: 36px;
+    color: gainsboro; 
+    margin-bottom: 70px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    border-bottom: 2px solid #e6990a; 
+    padding-bottom: 10px; 
+  }
+  
+  
+  .table-controls {
+      text-align: right;
+      margin-top: 14px;
+      margin-bottom: 50px;
+  }
+  
+  .table-controls ul {
+      background: #000000;
+      padding: 12px 30px 15px;
+      display: inline-block;
+  }
+  
+  .table-controls ul li {
+      list-style: none;
+      font-size: 14px;
+      color: #aaaaaa;
+      list-style: none;
+      display: inline-block;
+      margin-right: 35px;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+  }
+  
+  .table-controls ul li:after {
+      position: absolute;
+      right: -22px;
+      top: 0;
+      content: "/";
+  }
+  
+  .table-controls ul li.active {
+      color: #ffffff;
+  }
+  
+  .table-controls ul li.active:after {
+      color: #aaaaaa;
+  }
+  
+  .table-controls ul li:last-child {
+      margin-right: 0;
+  }
+  
+  .table-controls ul li:last-child:after {
+      display: none;
+  }
+  
+  .class-timetable .ts-meta h5,
+  .class-timetable .ts-meta span {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+  }
+  
+  .class-timetable.filtering .ts-meta h5,
+  .class-timetable.filtering .ts-meta span {
+      opacity: 0;
+  }
+  
+  .class-timetable.filtering .ts-meta.show h5,
+  .class-timetable.filtering .ts-meta.show span {
+      opacity: 1;
+  }
+  
+  .class-timetable.details-timetable td h5 {
+      color: #ffffff1a;
+  }
+  
+  .class-timetable.details-timetable td span {
+      color: #363636;
+  }
+  
+  .class-timetable.details-timetable td.hover-dp h5 {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+  }
+  
+  .class-timetable.details-timetable td.hover-dp span {
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+  }
+  
+  .class-timetable.details-timetable td.hover-dp:hover h5 {
+      color: #ffffff;
+  }
+  
+  .class-timetable.details-timetable td.hover-dp:hover span {
+      color: #a9a9a9;
+  }
+  
+  .class-timetable.details-timetable td.dark-bg {
+      background: #0a0a0a;
+  }
+  
+  .class-timetable table {
+      border: 1px solid #363636;
+      text-align: center;
+  }
+  
+  .class-timetable table thead {
+      border-bottom: 1px solid #363636;
+  }
+  
+  .class-timetable table thead tr th {
+      font-size: 14px;
+      color: #ffffff;
+      background: #f36100;
+      border-right: 1px solid #363636;
+      padding: 15px 0;
+      font-weight: 400;
+  }
+  
+  .class-timetable table tbody tr td {
+      width: 146px;
+      padding: 35px 0;
+  }
+  
+  .class-timetable table tbody tr td.class-time {
+      font-size: 12px;
+      color: #f36100;
+      background: #000000;
+      border: 1px solid #363636;
+  }
+  
+  .class-timetable table tbody tr td.dark-bg {
+      background: #090909;
+  }
+  
+  .class-timetable table tbody tr td.hover-bg {
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  .class-timetable table tbody tr td.hover-bg:hover {
+      background: #f36100;
+  }
+  
+  .class-timetable table tbody tr td.blank-td {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .class-timetable table tbody tr td.blank-td:after {
+      position: absolute;
+      left: -47px;
+      top: 59px;
+      width: 237px;
+      height: 1px;
+      background: #363636;
+      content: "";
+      -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+      transform: rotate(-40deg);
+  }
+  
+  .class-timetable table tbody tr td h5 {
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+  }
+  
+  .class-timetable table tbody tr td span {
+      display: block;
+      font-size: 12px;
+      color: #a9a9a9;
+  }
+  
+  /*---------------------
+    Class Details Section
+  -----------------------*/
+  
+  /*logo css Start*/
+  
+  .row {
+    display: flex;
+  }
+  
+  .container-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 170px;
+  }
+  
+  /*logo css end*/
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+
+  /* css for navgation start*/
+
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c0202;
+    height: 90px;
+  }
+
+  .container-logo1{
+    margin-top: 18px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+  
+  .navbar a:hover {
+    background-color: #dfb80e;
+    color: black;
+  }
+  
+  .navbar .logo {
+    flex: 1;
+  }
+  
+  .navbar .menu {
+    display: flex;
+  }
+  
+  .navbar.responsive .menu {
+    display: block;
+  }
+  
+  .navbar .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar .icon {
+        display: block;
+        cursor: pointer;
+    }
+  
+    .navbar .menu {
+        display: none;
+    }
+  
+    .navbar.responsive .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+    }
+  
+    .navbar.responsive .menu a {
+        padding: 10px 20px;
+        /* text-align: center; */
+    }
+  }
+  
+  /*css for navgation end*/
