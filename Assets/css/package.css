@@ -269,9 +269,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
-  padding: 14px 20px;
+  background-color: #050000;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure navigation bar is above other content */
+  width: 100%;
+  transition: top 0.3s; /* Add transition effect for smooth appearance */
 }
+
+
 
 .navbar a {
   color: white;

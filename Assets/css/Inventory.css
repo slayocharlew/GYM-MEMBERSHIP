@@ -1,19 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #363636;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 0;
-}
- 
-
-
-
-  body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:#363636;
-  }
+}
+
     
   .row {
     display: flex;
@@ -121,8 +115,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #363636;
+  background-color: #050000;
   position: fixed;
+  height: 70px;
   top: 0;
   left: 0;
   right: 0;
@@ -132,8 +127,9 @@ body {
 }
 
 .container-logo {
-  margin-top: 38px; /* Adjust as needed */
+  margin-top: 15px; /* Adjust as needed */
 }
+
 
 .navbar a {
   color: white;
