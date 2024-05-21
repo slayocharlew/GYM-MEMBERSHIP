@@ -23,7 +23,7 @@ body::before {
   background-image: inherit; /* Inherit background image from body */
   background-size: cover;
   background-position: center;
-  filter: blur(10px); /* Adjust the blur intensity as needed */
+  filter: blur(5px); /* Adjust the blur intensity as needed */
   z-index: -1; /* Send it to the back */
 }
   
