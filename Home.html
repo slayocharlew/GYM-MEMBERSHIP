@@ -9,19 +9,37 @@
      </head>
     <body>
 
-        <!--logo start-->
-        <div class="container-logo">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="fs-about">
-                  <div class="fa-logo">
-                    <img src="/Assets/Image/logo.png" alt="">
+          <!-- Navigation bar -->
+          <div class="navbar" id="myNavbar">
+            <!-- Logo -->
+              <div class="container-logo">
+                  <div class="fs-about">
+                      <div class="fa-logo">
+                        <img src="/Assets/Image/logo.png" alt="">
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
-        </div>
-        <!--logo end-->
+          
+              <!-- Menu -->
+              <div class="menu">
+                  <a href="/Admin/admin-login.html">LOGIN ADMIN</a>
+              </div>
+            
+              <!-- Menu Icon -->
+              <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                &#9776;
+              </a>
+          </div>
+  
+  
+          <script>
+              function toggleMenu() {
+                  let navbar = document.getElementById("myNavbar");
+                  navbar.classList.toggle("responsive");
+              }
+          </script>
+  
+          <!--Navgatiob button ends!-->
     
         <!--card start-->
             <div class="container">

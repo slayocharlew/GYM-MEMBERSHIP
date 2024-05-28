@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/Admin/css/admin-dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('manage-trainers')">Manage Trainers</a></li>
+        <li><a href="#" onclick="showSection('view-purchases')">View Purchases</a></li>
+        <li><a href="#" onclick="showSection('manage-equipment')">Manage Equipment</a></li>
+      </ul>
+    </nav>
+    <div id="manage-trainers" class="section" style="display: none;">
+      <h2>Manage Trainers</h2>
+      <button onclick="addTrainer()">Add Trainer</button>
+      <div id="trainerList">
+        <!-- List of trainers will be displayed here -->
+      </div>
+    </div>
+    <div id="view-purchases" class="section" style="display: none;">
+      <h2>View Purchases</h2>
+      <div id="purchaseList">
+        <!-- List of purchases will be displayed here -->
+      </div>
+    </div>
+    <div id="manage-equipment" class="section" style="display: none;">
+      <h2>Manage Equipment</h2>
+      <button onclick="addEquipment()">Add Equipment</button>
+      <div id="equipmentList">
+        <!-- List of equipment will be displayed here -->
+      </div>
+    </div>
+  </div>
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script type="module" src="/Admin/js/admin-dashboard.js"></script>
+</body>
+</html>
+
