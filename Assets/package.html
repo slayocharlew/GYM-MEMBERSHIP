@@ -1,329 +1,288 @@
 <!DOCTYPE html>
- <html lang="en">
-  <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Membership Packages</title>
-     <link rel="stylesheet" href="/Assets/css/package.css">
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Packages</title>
+    <link rel="stylesheet" href="/Assets/css/package.css">
+</head>
 
-  <body>
-
-          <!--Navgation button stert!-->
-
-          <div class="navbar" id="myNavbar">
-
-            <!--logo on navgation button start-->
-            <div class="container-logo">
-              <div class="row">
+<body>
+    <!-- Navigation button start -->
+    <div class="navbar" id="myNavbar">
+        <!-- Logo on navigation button start -->
+        <div class="container-logo">
+            <div class="row">
                 <div class="col-lg-4">
-                  <div class="fs-about">
-                    <div class="fa-logo">
-                      <img src="/Assets/Image/logo.png" alt="">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <img src="/Assets/Image/logo.png" alt="">
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-          </div>
-          <!--logo on navgation button end-->
-          
-          <div class="menu">
-              <a href="/Home.html">HOME</a>
-              <a href="/classes.html">CLASSES</a>
-              <a href="/Inventory.html">INVENTORY</a>
-              <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
-          </div>
-      
-          <a href="javascript:void(0);"
-             class="icon" 
-             onclick="toggleMenu()">
-              &#9776;
-          </a>
-      </div>
-      
-      <script>
-          function toggleMenu() {
-              let navbar = document.getElementById("myNavbar");
-              navbar.classList.toggle("responsive");
-          }
-      </script>
+            </div>
+        </div>
+        <!-- Logo on navigation button end -->
 
-    <!--Navgatiob button ends!-->
+        <div class="menu">
+            <a href="/Home.html">HOME</a>
+            <a href="/classes.html">CLASSES</a>
+            <a href="/Inventory.html">INVENTORY</a>
+            <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
+        </div>
+      
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let navbar = document.getElementById("myNavbar");
+            navbar.classList.toggle("responsive");
+        }
+    </script>
+    <!-- Navigation button ends -->
 
     <div class="container1">
-      <h1>Membership Packages</h1>
+        <h1>Membership Packages</h1>
         <div class="packages">
             <div class="package silver">
-              <div class="package-header">
-                  <h2>Silver Package</h2>
-              </div>
-              <div class="package-body">
-                  <p>Price: 50,000Tsh/= </p>
-                  <p>Duration: 1 month</p>
-                  <p>Expiration: <span id="silver-expiration"></span></p>
-                  <!-- Add data attributes for package information -->
-                  <button class="purchase-btn" onclick="calculateExpiration('silver', 'Silver Package', 50000)">Purchase Now</button>
-              </div>
+                <div class="package-header">
+                    <h2>Silver Package</h2>
+                </div>
+                <div class="package-body">
+                    <p>Price: 50,000Tsh/= </p>
+                    <p>Duration: 1 month</p>
+                    <p>Expiration: <span id="silver-expiration"></span></p>
+                    <button class="purchase-btn" onclick="calculateExpiration('silver', 'Silver Package', 50000)">Purchase Now</button>
+                </div>
             </div>
-          <div class="package diamond">
-              <div class="package-header">
-                  <h2>Diamond Package</h2>
-              </div>
-              <div class="package-body">
-                  <p>Price: 150,000Tsh/= </p>
-                  <p>Duration: 3 months</p>
-                  <p>Expiration: <span id="diamond-expiration"></span></p>
-                  <button class="purchase-btn" onclick="calculateExpiration('diamond', 'diamond package', 150000)">Purchase Now</button>
-              </div>
-          </div>
-          <div class="package gold">
-              <div class="package-header">
-                  <h2>Gold Package</h2>
-              </div>
-              <div class="package-body">
-                  <p>Price: 300,000Tsh/= </p>
-                  <p>Duration: 6 months</p>
-                  <p>Expiration: <span id="gold-expiration"></span></p>
-                  <button class="purchase-btn" onclick="calculateExpiration('gold', 'gold package', 300000)">Purchase Now</button>
-              </div>
-          </div>
-      </div>
+            <div class="package diamond">
+                <div class="package-header">
+                    <h2>Diamond Package</h2>
+                </div>
+                <div class="package-body">
+                    <p>Price: 150,000Tsh/= </p>
+                    <p>Duration: 3 months</p>
+                    <p>Expiration: <span id="diamond-expiration"></span></p>
+                    <button class="purchase-btn" onclick="calculateExpiration('diamond', 'Diamond Package', 150000)">Purchase Now</button>
+                </div>
+            </div>
+            <div class="package gold">
+                <div class="package-header">
+                    <h2>Gold Package</h2>
+                </div>
+                <div class="package-body">
+                    <p>Price: 300,000Tsh/= </p>
+                    <p>Duration: 6 months</p>
+                    <p>Expiration: <span id="gold-expiration"></span></p>
+                    <button class="purchase-btn" onclick="calculateExpiration('gold', 'Gold Package', 300000)">Purchase Now</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-   <!-- Trainers section Start -->
-   <div class="row">
-    <div class="col-lg-12">
-      <div class="team-title">
-        <div class="section-title">
-          <span>Our Team</span>
-          <h2>TRAIN WITH EXPERTS</h2>
+    <!-- Trainers section Start -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="team-title">
+                <div class="section-title">
+                    <span>Our Team</span>
+                    <h2>TRAIN WITH EXPERTS</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('Sarah Lee', '+255 753 131 868', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-1.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">RLefew D. Loee</div>
+                <div class="subtext">Weight-loss Trainer</div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('Annah McDon', '+255 623 136 132', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-2.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">Rachel Adam</div>
+                <div class="subtext">Boxing Trainer</div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('Jane Smith', '+255 629 880 938', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-3.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">Robert Cage</div>
+                <div class="subtext">Body-Builder & Karate Trainer</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('Mike Johson', '+255 715 700 411', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-4.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">Kimberly Stone</div>
+                <div class="subtext">Fitness Trainer</div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('Emily Davis', '+255 743 330 569', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-5.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">Keaf Shen</div>
+                <div class="subtext">Yoga Trainer</div>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="trainer-link" onclick="openTrainerForm('CrossFit Coach', '+255 717 275 260', 'Boxing Trainer')">
+              <img src="/Assets/Image/team/team-6.jpg" alt="Trainer 1">
+              <div class="overlay">
+                <div class="text">RLefew D. Loee</div>
+                <div class="subtext">Cardio Trainer</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Sarah Lee', '+255 753 131 868', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-1.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">RLefew D. Loee</div>
-            <div class="subtext">Weight-loss Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Annah McDon', '+255 623 136 132', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-2.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">Rachel Adam</div>
-            <div class="subtext">Boxing Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Jane Smith', '+255 629 880 938', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-3.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">Robert Cage</div>
-            <div class="subtext">Body-Builder & Karate Trainer</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Mike Johson', '+255 715 700 411', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-4.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">Kimberly Stone</div>
-            <div class="subtext">Fitness Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Emily Davis', '+255 743 330 569', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-5.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">Keaf Shen</div>
-            <div class="subtext">Yoga Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('CrossFit Coach', '+255 717 275 260', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-6.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">RLefew D. Loee</div>
-            <div class="subtext">Cardio Trainer</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- Trainers section End -->
+    <!-- Trainers section End -->
 
- 
-<!-- The Modal -->
-<div id="myModal" class="modal" style="display: none;">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Book an Appointment</h2>
+    <!-- The Modal -->
+    <div id="myModal" class="modal" style="display: none;">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Book an Appointment</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Form for input -->
+                <form id="appointmentForm">
+                    <!-- Inputs for trainer's name and phone number (disabled and hidden) -->
+                    <input type="hidden" id="trainerName" name="trainerName">
+                    <input type="hidden" id="trainerPhone" name="trainerPhone">
+                    <!-- Display trainer's name and phone number -->
+                    <label for="trainerNameLabel">Trainer's Name:</label><br>
+                    <input type="text" id="trainerNameLabel" name="trainerNameLabel" disabled><br>
+                    <label for="trainerPhoneLabel">Trainer's Phone:</label><br>
+                    <input type="text" id="trainerPhoneLabel" name="trainerPhoneLabel" disabled><br>
+                    <!-- Input for user's short description -->
+                    <label for="description">Leave your Message:</label><br>
+                    <textarea id="description" name="description" placeholder="Mention your thoughts & contact here!" required></textarea><br><br>
+                    <button type="submit">Make Appointment</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">
-      <!-- Form for input -->
-      <form id="appointmentForm">
-        <!-- Inputs for trainer's name and phone number (disabled and hidden) -->
-        <input type="hidden" id="trainerName" name="trainerName">
-        <input type="hidden" id="trainerPhone" name="trainerPhone">
-        <!-- Display trainer's name and phone number -->
-        <label for="trainerNameLabel">Trainer's Name:</label><br>
-        <input type="text" id="trainerNameLabel" name="trainerNameLabel" disabled><br>
-        <label for="trainerPhoneLabel">Trainer's Phone:</label><br>
-        <input type="text" id="trainerPhoneLabel" name="trainerPhoneLabel" disabled><br>
-        <!-- Input for user's short description -->
-        <label for="description">Leave your Message:</label><br>
-        <textarea id="description" name="description" Placeholder="Mention your thought & Contact here!" required></textarea><br><br>
-        <button type="submit">Make Appointment</button>
-      </form>
-    </div>
-  </div>
-</div>
 
     <!-- Logo -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="fs-about">
-            <div class="fa-logo">
-              <img src="/Assets/Image/logo.png" alt="">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="fs-about">
+                    <div class="fa-logo">
+                        <img src="/Assets/Image/logo.png" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
- <script src="/Assets/js/package.js"></script>
+    <script src="/Assets/js/package.js"></script>
 
-  <!-- JavaScript -->
-<script>
-  // JavaScript code
-  // Define the openTrainerForm function
-  function openTrainerForm(name, phoneNumber, role) {
-    // Set trainer's name and phone number in hidden inputs and display inputs
-    document.getElementById('trainerName').value = name;
-    document.getElementById('trainerPhone').value = phoneNumber;
-    document.getElementById('trainerNameLabel').value = name;
-    document.getElementById('trainerPhoneLabel').value = phoneNumber;
-    
-    // Show the modal
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-  }
-  
-  // Get the modal, add event listeners, etc.
-  var modal = document.getElementById("myModal");
-  
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  
-  // Form submission
-  document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-    // You can handle form submission here
-    // For now, let's just close the modal
-    modal.style.display = "none";
-    alert("Appointment booked!");
-  });
-  </script>
+    <script>
+        // JavaScript code
+        // Define the openTrainerForm function
+        function openTrainerForm(name, phoneNumber, role) {
+          // Set trainer's name and phone number in hidden inputs and display inputs
+          document.getElementById('trainerName').value = name;
+          document.getElementById('trainerPhone').value = phoneNumber;
+          document.getElementById('trainerNameLabel').value = name;
+          document.getElementById('trainerPhoneLabel').value = phoneNumber;
+          
+          // Show the modal
+          var modal = document.getElementById("myModal");
+          modal.style.display = "block";
+        }
+        
+        // Get the modal, add event listeners, etc.
+        var modal = document.getElementById("myModal");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        
+        // Form submission
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent default form submission
+          // You can handle form submission here
+          // For now, let's just close the modal
+          modal.style.display = "none";
+          alert("Appointment booked!");
+        });
+        </script>
 </body>
 
 <script type="module">
- // Import the functions you need from the Firebase SDKs
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-import { getDatabase, ref, push, set, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+    // Import the functions you need from the Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
 
-// Your Firebase project configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
-  authDomain: "gym-membership-3881e.firebaseapp.com",
-  databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
-  projectId: "gym-membership-3881e",
-  storageBucket: "gym-membership-3881e.appspot.com",
-  messagingSenderId: "342224120014",
-  appId: "1:342224120014:web:0318e246d79e335ec2889f"
-};
+    // Your Firebase project configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
+        authDomain: "gym-membership-3881e.firebaseapp.com",
+        databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
+        projectId: "gym-membership-3881e",
+        storageBucket: "gym-membership-3881e.appspot.com",
+        messagingSenderId: "342224120014",
+        appId: "1:342224120014:web:0318e246d79e335ec2889f"
+    };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); // Initialize the authentication module
-const database = getDatabase();
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-function calculateExpiration(packageType, packageName, packagePrice) {
-  // Calculate expiration date (replace with your logic)
-  const expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 30); // Example: 30 days from today
+    // Load trainers from Firestore
+    async function loadTrainers() {
+        const trainersList = document.getElementById('trainers-list');
+        trainersList.innerHTML == '';
+        const querySnapshot = await getDocs(collection(db, "trainers"));
+        querySnapshot.forEach((doc) => {
+            const trainer = doc.data();
+            trainersList.innerHTML += `
+                <div class="card">
+                    <a href="#" class="trainer-link" onclick="openTrainerForm('${trainer.name}', '${trainer.phoneNumber}', '${trainer.role}')">
+                        <img src="${trainer.imageURL}" alt="Trainer">
+                        <div class="overlay">
+                            <div class="text">${trainer.name}</div>
+                            <div class="subtext">${trainer.role}</div>
+                        </div>
+                    </a>
+                </div>
+            `;
+        });
+    }
 
-  // Convert expiration date to Firebase-compatible format (optional)
-  const firebaseExpiration = expirationDate.toISOString();
-
-  // Get a reference to the currently logged-in user (assuming authentication is set up)
-  const userId = getAuth().currentUser.uid;
-
-  //users/<user_id>/packages/<package_type>.
-
-  // Retrieve user data (optional)
-  const userRef = database.ref('users/' + userId);
-  userRef.once('value').then((snapshot) => {
-    const userData = snapshot.val();
-    const username = userData.username; // Adjust based on your data structure
-    const email = userData.email; // Adjust based on your data structure
-
-    // Create data to save for the package
-    set(ref(database, 'users/' + user.uid), {
-      name: packageName,
-      price: packagePrice,
-      expiration: firebaseExpiration,
-      username, // From user data
-      email // From user data
-    });
-
-    // Reference to store package information under the user's packages node for chosen package type
-    const userPackageRef = database.ref(`users/${userId}/packages/${packageType}`);
-
-    // Save package information to the database
-    userPackageRef.set(packageData)
-      .then(() => {
-        console.log('Package information saved successfully!');
-      })
-      .catch((error) => {
-        console.error('Error saving package information: ', error);
-      });
-  });
-}
-
-function calculateExpirationDate() {
-    // Calculate expiration date (example: 30 days from today)
-    var expirationDate = new Date();
-    expirationDate.setDate(expirationDate.getDate() + 30);
-    return expirationDate.toISOString();
-}
+    loadTrainers();
 </script>
 
 </html>

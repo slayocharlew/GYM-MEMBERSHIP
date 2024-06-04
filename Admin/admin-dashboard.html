@@ -11,11 +11,21 @@
     <h1>Admin Dashboard</h1>
     <nav>
       <ul>
-        <li><a href="#" onclick="showSection('manage-trainers')">Manage Trainers</a></li>
+        <li><a href="#" onclick="showSection('manage-members')">Manage Members</a></li>
+        <button onclick="window.location.href='Trainer.html'">Manage Trainers</button>
         <li><a href="#" onclick="showSection('view-purchases')">View Purchases</a></li>
         <li><a href="#" onclick="showSection('manage-equipment')">Manage Equipment</a></li>
       </ul>
     </nav>
+    <div id="manage-members" class="section" style="display: none;">
+      <h2>Manage Members</h2>
+      <button onclick="addTrainer()">Add Trainer</button>
+      <div id="memberList">
+        <!-- List of trainers will be displayed here -->
+      </div>
+    </div>
+
+
     <div id="manage-trainers" class="section" style="display: none;">
       <h2>Manage Trainers</h2>
       <button onclick="addTrainer()">Add Trainer</button>
@@ -23,12 +33,14 @@
         <!-- List of trainers will be displayed here -->
       </div>
     </div>
+
     <div id="view-purchases" class="section" style="display: none;">
       <h2>View Purchases</h2>
       <div id="purchaseList">
         <!-- List of purchases will be displayed here -->
       </div>
     </div>
+
     <div id="manage-equipment" class="section" style="display: none;">
       <h2>Manage Equipment</h2>
       <button onclick="addEquipment()">Add Equipment</button>

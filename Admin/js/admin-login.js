@@ -24,7 +24,7 @@ document.getElementById("adminLoginForm").addEventListener("submit", function(ev
   signInWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
       const user = userCredential.user;
-      if (user.email === 'slayoemma177@gmail.com') { // replace with your admin check logic
+      if (user.email === 'cosmasrabi@gmail.com') { // replace with your admin check logic
         window.location.href = "/Admin/admin-dashboard.html";
       } else {
         alert("Not authorized as admin");
