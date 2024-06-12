@@ -1,142 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Trainers</title>
-    <link rel="stylesheet" href="/Admin/css/Trainer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Trainers</title>
+  <link rel="stylesheet" href="/Admin/css/Trainer.css">
 </head>
 <body>
-    <h1>Manage Trainers</h1>
-    <div>
-        <button onclick="openTrainerForm()">Add New Trainer</button>
-    </div>
-    <div id="trainers-list">
-        <!-- Trainers will be dynamically loaded here -->
-    </div>
+  <h1>Manage Trainers</h1>
+  <table id="trainersTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Trainers will be loaded here dynamically -->
+    </tbody>
+  </table>
 
-    <!-- Trainer Form Modal -->
-    <div id="trainerModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2 id="formTitle">Add Trainer</h2>
-            </div>
-            <div class="modal-body">
-                <form id="trainerForm">
-                    <input type="hidden" id="trainerId">
-                    <label for="trainerName">Name:</label><br>
-                    <input type="text" id="trainerName" required><br>
-                    <label for="trainerPhone">Phone Number:</label><br>
-                    <input type="text" id="trainerPhone" required><br>
-                    <label for="trainerRole">Role:</label><br>
-                    <input type="text" id="trainerRole" required><br>
-                    <label for="trainerImage">Image URL:</label><br>
-                    <input type="text" id="trainerImage" required><br><br>
-                    <button type="submit">Save</button>
-                </form>
-            </div>
-        </div>
-    </div>
+  <h2>Add New Trainer</h2>
+  <form id="addTrainerForm">
+    <label for="newTrainerName">Name:</label>
+    <input type="text" id="newTrainerName" required>
+    <label for="newTrainerPhone">Phone:</label>
+    <input type="text" id="newTrainerPhone" required>
+    <label for="newTrainerRole">Role:</label>
+    <input type="text" id="newTrainerRole" required>
+    <button type="submit">Add Trainer</button>
+  </form>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDocs } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+  <script type="module">
+    // Import the functions you need from the Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getDatabase, ref, set, update, remove, onValue, push } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
-            authDomain: "gym-membership-3881e.firebaseapp.com",
-            databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
-            projectId: "gym-membership-3881e",
-            storageBucket: "gym-membership-3881e.appspot.com",
-            messagingSenderId: "342224120014",
-            appId: "1:342224120014:web:0318e246d79e335ec2889f"
-        };
+    // Your Firebase project configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
+      authDomain: "gym-membership-3881e.firebaseapp.com",
+      databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
+      projectId: "gym-membership-3881e",
+      storageBucket: "gym-membership-3881e.appspot.com",
+      messagingSenderId: "342224120014",
+      appId: "1:342224120014:web:0318e246d79e335ec2889f"
+    };
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
 
-        const trainersList = document.getElementById('trainers-list');
-        const trainerForm = document.getElementById('trainerForm');
-        const trainerModal = document.getElementById('trainerModal');
-        const formTitle = document.getElementById('formTitle');
-
-        async function loadTrainers(){
-            trainersList.innerHTML = '';
-            const querySnapshot = await getDocs(collection(db, "trainers"));
-            querySnapshot.forEach((doc) => {
-                const trainer = doc.data();
-                trainersList.innerHTML += `
-                    <div class="trainer-card" data-id="${doc.id}">
-                        <img src="${trainer.imageURL}" alt="Trainer">
-                        <div>
-                            <h3>${trainer.name}</h3>
-                            <p>${trainer.phoneNumber}</p>
-                            <p>${trainer.role}</p>
-                            <button onclick="editTrainer('${doc.id}', '${trainer.name}', '${trainer.phoneNumber}', '${trainer.role}', '${trainer.imageURL}')">Edit</button>
-                            <button onclick="deleteTrainer('${doc.id}')">Delete</button>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        async function addTrainer(trainer) {
-            await addDoc(collection(db, "trainers"), trainer);
-            loadTrainers();
-        }
-
-        async function updateTrainer(trainerId, trainer) {
-            const trainerRef = doc(db, "trainers", trainerId);
-            await updateDoc(trainerRef, trainer);
-            loadTrainers();
-        }
-
-        async function deleteTrainer(trainerId) {
-            await deleteDoc(doc(db, "trainers", trainerId));
-            loadTrainers();
-        }
-
-        function openTrainerForm(name = '', phoneNumber = '', role = '', imageURL = '', id = '') {
-            trainerForm.reset();
-            formTitle.innerText = id ? 'Edit Trainer' : 'Add Trainer';
-            document.getElementById('trainerId').value = id;
-            document.getElementById('trainerName').value = name;
-            document.getElementById('trainerPhone').value = phoneNumber;
-            document.getElementById('trainerRole').value = role;
-            document.getElementById('trainerImage').value = imageURL;
-            trainerModal.style.display = 'block';
-        }
-
-        trainerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const trainer = {
-                name: document.getElementById('trainerName').value,
-                phoneNumber: document.getElementById('trainerPhone').value,
-                role: document.getElementById('trainerRole').value,
-                imageURL: document.getElementById('trainerImage').value,
-            };
-            const trainerId = document.getElementById('trainerId').value;
-            if (trainerId) {
-                updateTrainer(trainerId, trainer);
-            } else {
-                addTrainer(trainer);
-            }
-            trainerModal.style.display = 'none';
+    // Retrieve and display trainers
+    function loadTrainers() {
+      const trainersRef = ref(database, 'trainers');
+      onValue(trainersRef, (snapshot) => {
+        const trainersTableBody = document.getElementById('trainersTable').getElementsByTagName('tbody')[0];
+        trainersTableBody.innerHTML = ''; // Clear the table body
+        snapshot.forEach((childSnapshot) => {
+          const trainer = childSnapshot.val();
+          const trainerRow = `
+            <tr>
+              <td>${trainer.name}</td>
+              <td>${trainer.phone}</td>
+              <td>${trainer.role}</td>
+              <td>
+                <button onclick="editTrainer('${childSnapshot.key}', '${trainer.name}', '${trainer.phone}', '${trainer.role}')">Edit</button>
+                <button onclick="deleteTrainer('${childSnapshot.key}')">Delete</button>
+              </td>
+            </tr>
+          `;
+          trainersTableBody.innerHTML += trainerRow;
         });
+      });
+    }
 
-        window.onload = loadTrainers;
+    // Load trainers on page load
+    loadTrainers();
 
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-            trainerModal.style.display = "none";
-        }
+    // Add new trainer
+    document.getElementById('addTrainerForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const newTrainerName = document.getElementById('newTrainerName').value;
+      const newTrainerPhone = document.getElementById('newTrainerPhone').value;
+      const newTrainerRole = document.getElementById('newTrainerRole').value;
 
-        window.onclick = function(event) {
-            if (event.target == trainerModal) {
-                trainerModal.style.display = "none";
-            }
-        }
-    </script>
+      const trainersRef = ref(database, 'trainers');
+      const newTrainerRef = push(trainersRef);
+      set(newTrainerRef, {
+        name: newTrainerName,
+        phone: newTrainerPhone,
+        role: newTrainerRole,
+      }).then(() => {
+        console.log('Trainer added successfully!');
+        // Clear form inputs
+        document.getElementById('addTrainerForm').reset();
+        // Reload trainers
+        loadTrainers();
+      }).catch((error) => {
+        console.error('Error adding trainer:', error);
+      });
+    });
+
+    // Edit trainer
+    window.editTrainer = function(key, name, phone, role) {
+      const newName = prompt("Enter new name:", name);
+      const newPhone = prompt("Enter new phone:", phone);
+      const newRole = prompt("Enter new role:", role);
+
+      if (newName && newPhone && newRole) {
+        const trainerRef = ref(database, 'trainers/' + key);
+        update(trainerRef, {
+          name: newName,
+          phone: newPhone,
+          role: newRole,
+        }).then(() => {
+          console.log('Trainer updated successfully!');
+          loadTrainers();
+        }).catch((error) => {
+          console.error('Error updating trainer:', error);
+        });
+      }
+    };
+
+    // Delete trainer
+    window.deleteTrainer = function(key) {
+      const trainerRef = ref(database, 'trainers/' + key);
+      remove(trainerRef).then(() => {
+        console.log('Trainer deleted successfully!');
+        loadTrainers();
+      }).catch((error) => {
+        console.error('Error deleting trainer:', error);
+      });
+    };
+  </script>
 </body>
 </html>
