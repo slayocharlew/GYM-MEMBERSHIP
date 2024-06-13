@@ -78,7 +78,7 @@
     }
 
     // Load trainers on page load
-    loadTrainers();
+    window.addEventListener('DOMContentLoaded', loadTrainers);
 
     // Add new trainer
     document.getElementById('addTrainerForm').addEventListener('submit', function(event) {

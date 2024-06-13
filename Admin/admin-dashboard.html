@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="/Admin/css/admin-dashboard.css">
 </head>
 <body>
+
+  <div class="navbar">
+    <!-- Other navigation items -->
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+
   <div class="dashboard-container">
     <h1>Admin Dashboard</h1>
     <nav>
       <ul>
-        <li><a href="#" onclick="showSection('manage-members')">Manage Members</a></li>
+        <button onclick="window.location.href='/Admin/manage-member.html'">Manage Members</button>
         <button onclick="window.location.href='Trainer.html'">Manage Trainers</button>
         <li><a href="#" onclick="showSection('view-purchases')">View Purchases</a></li>
         <li><a href="#" onclick="showSection('manage-equipment')">Manage Equipment</a></li>
@@ -55,6 +61,40 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
   <script type="module" src="/Admin/js/admin-dashboard.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+    // Your Firebase project configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
+      authDomain: "gym-membership-3881e.firebaseapp.com",
+      databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
+      projectId: "gym-membership-3881e",
+      storageBucket: "gym-membership-3881e.appspot.com",
+      messagingSenderId: "342224120014",
+      appId: "1:342224120014:web:0318e246d79e335ec2889f"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Logout function
+    const logoutBtn = document.getElementById('logoutBtn');
+    logoutBtn.addEventListener('click', () => {
+      signOut(auth).then(() => {
+        console.log('User signed out successfully');
+        // Redirect to login page
+        window.location.href = '/Home.html';
+      }).catch((error) => {
+        console.error('Error signing out:', error);
+      });
+    });
+  </script>
+
 </body>
 </html>
 
