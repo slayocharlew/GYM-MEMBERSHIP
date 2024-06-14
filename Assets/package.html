@@ -53,9 +53,8 @@
             <div class="package-body">
                 <p>Price: 50,000Tsh/= </p>
                 <p>Duration: 1 month</p>
-                <p>Expiration: <span id="silver-expiration"></span></p>
                 <!-- Add data attributes for package information -->
-                <button class="purchase-btn" onclick="purchasePackage('Silver', 'Silver Package', 50000)">Purchase Now</button>
+                <button class="purchase-btn" onclick="redirectToTransaction('Silver')">Purchase Now</button>
             </div>
         </div>
         <div class="package diamond">
@@ -65,8 +64,7 @@
             <div class="package-body">
                 <p>Price: 150,000Tsh/= </p>
                 <p>Duration: 3 months</p>
-                <p>Expiration: <span id="diamond-expiration"></span></p>
-                <button class="purchase-btn" onclick="purchasePackage('Diamond', 'Diamond Package', 150000)">Purchase Now</button>
+                <button class="purchase-btn" onclick="redirectToTransaction('Diamond')">Purchase Now</button>
             </div>
         </div>
         <div class="package gold">
@@ -76,12 +74,19 @@
             <div class="package-body">
                 <p>Price: 300,000Tsh/= </p>
                 <p>Duration: 6 months</p>
-                <p>Expiration: <span id="gold-expiration"></span></p>
-                <button class="purchase-btn" onclick="purchasePackage('Gold', 'Gold Package', 300000)">Purchase Now</button>
+                <button class="purchase-btn" onclick="redirectToTransaction('Gold')">Purchase Now</button>
             </div>
         </div>
     </div>
   </div>
+
+  <script>
+    function redirectToTransaction(packageType) {
+      window.location.href = `/Assets/transaction.html?type=${packageType}`;
+    }
+  </script>
+
+  <script src="/Assets/js/package.js"></script>
 
   <!-- Trainers section Start -->
   <div class="row">
@@ -197,7 +202,6 @@
     </div>
   </div>
 
-  <script src="/Assets/js/package.js"></script>
 
   <!-- JavaScript -->
   <script>
