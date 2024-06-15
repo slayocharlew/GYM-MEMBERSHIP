@@ -1,142 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gym Inventory</title>
-        <link rel="stylesheet" href="/Assets/css/Inventory.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Inventory</title>
+  <link rel="stylesheet" href="/Assets/css/Inventory.css">
+</head>
 
-    <body>
+<body>
 
-        <!-- Navigation bar -->
-        <div class="navbar" id="myNavbar">
-          <!-- Logo -->
-            <div class="container-logo">
-                <div class="fs-about">
-                    <div class="fa-logo">
-                      <img src="/Assets/Image/logo.png" alt="">
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Menu -->
-            <div class="menu">
-                <a href="/Home.html">HOME</a>
-                <a href="/Inventory.html">INVENTORY</a>
-            </div>
-          
-            <!-- Menu Icon -->
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-              &#9776;
-            </a>
+  <!-- Navigation bar -->
+  <div class="navbar" id="myNavbar">
+    <!-- Logo -->
+    <div class="container-logo">
+      <div class="fs-about">
+        <div class="fa-logo">
+          <img src="/Assets/Image/logo.png" alt="">
         </div>
+      </div>
+    </div>
 
+    <!-- Menu -->
+    <div class="menu">
+      <a href="/Home.html">HOME</a>
+      <a href="/Inventory.html">INVENTORY</a>
+    </div>
 
-        <script>
-            function toggleMenu() {
-                let navbar = document.getElementById("myNavbar");
-                navbar.classList.toggle("responsive");
-            }
-        </script>
+    <!-- Menu Icon -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      &#9776;
+    </a>
+  </div>
 
-        <!--Navgatiob button ends!-->
-        
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="team-title">
-                    <div class="section-title">
-                       <span>Our Inventory</span>
-                    </div>
-                </div>
-            </div>
+  <script>
+    function toggleMenu() {
+      let navbar = document.getElementById("myNavbar");
+      navbar.classList.toggle("responsive");
+    }
+  </script>
+  <!-- Navigation bar ends -->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="team-title">
+        <div class="section-title">
+          <span>Our Inventory</span>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- first three card implementation start -->
-        <div class="container">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/Dumbbells.jpg">
-                </div>
-                <div class="content">
-                    <h1>Dumbbells</h1>
-                    <p class="item-count">Items Available: 20</p> <!-- New line added for item count -->
-                    <p>Handheld weights perfect for strength training. Ideal for exercises like bicep curls,
-                    shoulder presses, and lunges.
-                    </p>
-                </div>
-            </div>
-                <!--card one ends-->
-        
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/Barbell.jpg">
-                </div>
-                <div class="content">
-                    <h1>Barbell</h1>
-                    <p class="item-count">Items Available: 35</p> <!-- New line added for item count -->
-                    <p>ideal for compound exercises like squats, deadlifts, and bench presses. Essential for building strength and muscle mass
-                    </p>
-                </div>
-            </div>
-            <!--card two ends-->
-        
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/Running_Machine.jpg">
-                </div>
-                <div class="content">
-                    <h1>Running Machine</h1>
-                    <p class="item-count">Items Available: 10</p> <!-- New line added for item count -->
-                    <p>Essential cardio equipment that simulates walking. Perfect for improving cardiovascular health
-                    </p>
-                </div>
-            </div>
-            <!--card three end-->
-        </div>
+  <!-- Equipment Cards -->
+  <div class="container" id="equipmentContainer">
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/Dumbbells.jpg" alt="Dumbbells">
+      </div>
+      <div class="content">
+        <h1>Dumbbells</h1>
+        <p class="item-count">Items Available: 20</p>
+        <p>Handheld weights perfect for strength training. Ideal for exercises like bicep curls,
+          shoulder presses, and lunges.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/Barbell.jpg" alt="Barbell">
+      </div>
+      <div class="content">
+        <h1>Barbell</h1>
+        <p class="item-count">Items Available: 35</p>
+        <p>Ideal for compound exercises like squats, deadlifts, and bench presses. Essential for building strength and muscle mass.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/Running_Machine.jpg" alt="Running Machine">
+      </div>
+      <div class="content">
+        <h1>Running Machine</h1>
+        <p class="item-count">Items Available: 10</p>
+        <p>Essential cardio equipment that simulates walking. Perfect for improving cardiovascular health.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/cable_machines.jpg" alt="Cable Machine">
+      </div>
+      <div class="content">
+        <h1>Cable Machine</h1>
+        <p class="item-count">Items Available: 8</p>
+        <p>Versatile strength training equipment using adjustable cables. Ideal for targeting multiple muscle groups with controlled movements.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/Bench_press.jpg" alt="Bench Press">
+      </div>
+      <div class="content">
+        <h1>Bench Press</h1>
+        <p class="item-count">Items Available: 12</p>
+        <p>Essential for upper body strength training. Perfect for exercises targeting the chest, shoulders, and triceps using a barbell or dumbbells.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="/Assets/Image/Leg_Machine.jpg" alt="Leg Machine">
+      </div>
+      <div class="content">
+        <h1>Leg Machine</h1>
+        <p class="item-count">Items Available: 15</p>
+        <p>Designed to target and strengthen the muscles of the lower body, including quads, hamstrings, and calves. Ideal for leg extensions, curls, and presses.</p>
+      </div>
+    </div>
+  </div>
 
-        <!--seecond three cards implementation-->
-        <div class="container">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/cable_machines.jpg">
-                </div>
-                <div class="content">
-                    <h1>Cable Machine</h1>
-                    <p class="item-count">Items Available: 8</p> <!-- New line added for item count -->
-                    <p>Versatile strength training equipment using adjustable cables. Ideal for targeting multiple muscle groups with controlled movements
-                    </p>
-                </div>
-            </div>
-                <!--card one ends-->
-        
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/Bench_press.jpg">
-                </div>
-                <div class="content">
-                    <h1>Bench Press</h1>
-                    <p class="item-count">Items Available: 12</p> <!-- New line added for item count -->
-                    <p>Essential for upper body strength training. Perfect for exercises targeting the chest, shoulders, and triceps using a barbell or dumbbells
-                    </p>
-                </div>
-            </div>
-            <!--card two ends-->
-        
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/Assets/Image/Leg_Machine.jpg">
-                </div>
-                <div class="content">
-                    <h1>Leg Machine</h1>
-                    <p class="item-count">Items Available: 15</p> <!-- New line added for item count -->
-                    <p>Designed to target and strengthen the muscles of the lower body, including quads, hamstrings, and calves. Ideal for leg extensions, curls, and presses.
-                    </p>
-                </div>
-            </div>
-            <!--card three end-->
-        </div>
-        <!--end of card implementation card-->
+  <!-- JavaScript and Firebase SDK -->
+  <script type="module">
+    // Firebase SDK imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 
-    </body>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
+      authDomain: "gym-membership-3881e.firebaseapp.com",
+      databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
+      projectId: "gym-membership-3881e",
+      storageBucket: "gym-membership-3881e.appspot.com",
+      messagingSenderId: "342224120014",
+      appId: "1:342224120014:web:0318e246d79e335ec2889f"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const equipmentRef = ref(database, 'equipment');
+
+    // Function to save equipment data to Firebase
+    function saveEquipment(name, description, image, quantity) {
+      const newEquipmentRef = ref(database, 'equipment/' + name);
+      set(newEquipmentRef, {
+        name: name,
+        description: description,
+        image: image,
+        quantity: quantity
+      }).then(() => {
+        console.log('Equipment saved successfully:', name);
+      }).catch((error) => {
+        console.error('Error saving equipment:', error);
+      });
+    }
+
+    // Function to load equipment from Firebase
+    function loadEquipment() {
+      onValue(equipmentRef, (snapshot) => {
+        const equipmentContainer = document.getElementById('equipmentContainer');
+        equipmentContainer.innerHTML = ''; // Clear the container
+        snapshot.forEach((childSnapshot) => {
+          const equipment = childSnapshot.val();
+          const equipmentCard = `
+            <div class="card">
+              <div class="imgBx">
+                <img src="${equipment.image}" alt="${equipment.name}">
+              </div>
+              <div class="content">
+                <h1>${equipment.name}</h1>
+                <p class="item-count">Items Available: ${equipment.quantity}</p>
+                <p>${equipment.description}</p>
+              </div>
+            </div>
+          `;
+          equipmentContainer.innerHTML += equipmentCard;
+        });
+      });
+    }
+
+    // Save equipment details on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      saveEquipment("Dumbbells", "Handheld weights perfect for strength training. Ideal for exercises like bicep curls, shoulder presses, and lunges.", "/Assets/Image/Dumbbells.jpg", 20);
+      saveEquipment("Barbell", "Ideal for compound exercises like squats, deadlifts, and bench presses. Essential for building strength and muscle mass.", "/Assets/Image/Barbell.jpg", 35);
+      saveEquipment("Running Machine", "Essential cardio equipment that simulates walking. Perfect for improving cardiovascular health.", "/Assets/Image/Running_Machine.jpg", 10);
+      saveEquipment("Cable Machine", "Versatile strength training equipment using adjustable cables. Ideal for targeting multiple muscle groups with controlled movements.", "/Assets/Image/cable_machines.jpg", 8);
+      saveEquipment("Bench Press", "Essential for upper body strength training. Perfect for exercises targeting the chest, shoulders, and triceps using a barbell or dumbbells.", "/Assets/Image/Bench_press.jpg", 12);
+      saveEquipment("Leg Machine", "Designed to target and strengthen the muscles of the lower body, including quads, hamstrings, and calves. Ideal for leg extensions, curls, and presses.", "/Assets/Image/Leg_Machine.jpg", 15);
+      loadEquipment(); // Load equipment after saving
+    });
+  </script>
+
+</body>
 </html>
