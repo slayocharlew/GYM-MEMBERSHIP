@@ -3,211 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gym classes</title>
+  <title>Gym Classes</title>
   <link rel="stylesheet" href="/Assets/css/classes.css">
 </head>
 <body>
 
-              <!--Navgation button stert!-->
-
-              <div class="navbar" id="myNavbar">
-
-                <!--logo on navgation button start-->
-                <div class="container-logo1">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="fs-about">
-                        <div class="fa-logo">
-                          <img src="/Assets/Image/logo.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <!--logo on navgation button end-->
-              
-              <div class="menu">
-                  <a href="/Home.html">HOME</a>
-                  <a href="/classes.html">CLASSES</a>
-                  <a href="/Inventory.html">INVENTORY</a>
-                  <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
-              </div>
-          
-              <a href="javascript:void(0);"
-                 class="icon" 
-                 onclick="toggleMenu()">
-                  &#9776;
-              </a>
+  <!-- Navigation button start -->
+  <div class="navbar" id="myNavbar">
+    <!-- Logo on navigation button start -->
+    <div class="container-logo1">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <img src="/Assets/Image/logo.png" alt="">
+            </div>
           </div>
-          
-          <script>
-              function toggleMenu() {
-                  let navbar = document.getElementById("myNavbar");
-                  navbar.classList.toggle("responsive");
-              }
-          </script>
+        </div>
+      </div>
+    </div>
+    <!-- Logo on navigation button end -->
+
+    <div class="menu">
+      <a href="/Home.html">HOME</a>
+      <a href="/classes.html">CLASSES</a>
+      <a href="/Inventory.html">INVENTORY</a>
+      <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
+    </div>
     
-        <!--Navgatiob button ends!-->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      let navbar = document.getElementById("myNavbar");
+      navbar.classList.toggle("responsive");
+    }
+  </script>
+  <!-- Navigation button ends -->
 
   <!-- Class Timetable Section Begin -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="class-details-timetable_title">
-                    <h1>Classes timetable</h1>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="class-details-timetable_title">
+          <h1>Classes Timetable</h1>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="class-timetable details-timetable">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                                <th>Sunday</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="class-time">6.00am - 8.00am</td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Cardio</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Yoga</h5>
-                                    <span>Keaf Shen</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Fitness</h5>
-                                    <span>Kimberly Stone</span>
-                                </td>
-                                <td class="dark-bg blank-td"></td>
-                                <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Boxing</h5>
-                                    <span>Rachel Adam</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Body Building</h5>
-                                    <span>Robert Cage</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="class-time">10.00am - 12.00am</td>
-                                <td class="blank-td"></td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Fitness</h5>
-                                    <span>Kimberly Stone</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Cardio</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Body Building</h5>
-                                    <span>Robert Cage</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Karate</h5>
-                                    <span>Donald Grey</span>
-                                </td>
-                                <td class="blank-td"></td>
-                            </tr>
-                            <tr>
-                                <td class="class-time">5.00pm - 7.00pm</td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
-                                    <span>Rachel Adam</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Karate</h5>
-                                    <span>Donald Grey</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Body Building</h5>
-                                    <span>Robert Cage</span>
-                                </td>
-                                <td class="blank-td"></td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Yoga</h5>
-                                    <span>Keaf Shen</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Cardio</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Fitness</h5>
-                                    <span>Kimberly Stone</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="class-time">7.00pm - 9.00pm</td>
-                                <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Cardio</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                                <td class="dark-bg blank-td"></td>
-                                <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
-                                    <span>Rachel Adam</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>Yoga</h5>
-                                    <span>Keaf Shen</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                                    <h5>Karate</h5>
-                                    <span>Donald Grey</span>
-                                </td>
-                                <td class="dark-bg hover-dp ts-meta" data-tsmeta="fitness">
-                                    <h5>Boxing</h5>
-                                    <span>Rachel Adam</span>
-                                </td>
-                                <td class="hover-dp ts-meta" data-tsmeta="workout">
-                                    <h5>WEIGHT LOOSE</h5>
-                                    <span>RLefew D. Loee</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Class Timetable Section End -->
-
-<!-- Footer Section Begin -->
-<section class="footer-section">
-  <div class="container-logo">
-      <div class="row">
-          <div class="col-lg-4">
-              <div class="fs-about">
-                  <div class="fa-logo">
-                      <a href="#"><img src="/Assets/Image/logo.png" alt=""></a>
-                  </div>
-              </div>
-          </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="class-timetable details-timetable">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="class-time">6.00am - 8.00am</td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Weight Loss" data-trainer="RLefew D. Loee" data-description="A comprehensive weight loss program focusing on healthy diet and exercise.">
+                  <h5>WEIGHT LOSS</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Cardio" data-trainer="RLefew D. Loee" data-description="A high-energy cardio class to get your heart pumping and calories burning.">
+                  <h5>Cardio</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Yoga" data-trainer="Keaf Shen" data-description="A calming yoga session to improve flexibility and reduce stress.">
+                  <h5>Yoga</h5>
+                  <span>Keaf Shen</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Fitness" data-trainer="Kimberly Stone" data-description="A full-body fitness class to improve overall strength and conditioning.">
+                  <h5>Fitness</h5>
+                  <span>Kimberly Stone</span>
+                </td>
+                <td class="dark-bg blank-td"></td>
+                <td class="hover-dp ts-meta" data-title="Boxing" data-trainer="Rachel Adam" data-description="An intense boxing class to enhance strength and agility.">
+                  <h5>Boxing</h5>
+                  <span>Rachel Adam</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Body Building" data-trainer="Robert Cage" data-description="A muscle-building session focusing on strength training and body sculpting.">
+                  <h5>Body Building</h5>
+                  <span>Robert Cage</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-time">10.00am - 12.00pm</td>
+                <td class="blank-td"></td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Fitness" data-trainer="Kimberly Stone" data-description="A full-body fitness class to improve overall strength and conditioning.">
+                  <h5>Fitness</h5>
+                  <span>Kimberly Stone</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Weight Loss" data-trainer="RLefew D. Loee" data-description="A comprehensive weight loss program focusing on healthy diet and exercise.">
+                  <h5>WEIGHT LOSS</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Cardio" data-trainer="RLefew D. Loee" data-description="A high-energy cardio class to get your heart pumping and calories burning.">
+                  <h5>Cardio</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Body Building" data-trainer="Robert Cage" data-description="A muscle-building session focusing on strength training and body sculpting.">
+                  <h5>Body Building</h5>
+                  <span>Robert Cage</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Karate" data-trainer="Donald Grey" data-description="A self-defense class teaching the basics of Karate.">
+                  <h5>Karate</h5>
+                  <span>Donald Grey</span>
+                </td>
+                <td class="blank-td"></td>
+              </tr>
+              <tr>
+                <td class="class-time">5.00pm - 7.00pm</td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Boxing" data-trainer="Rachel Adam" data-description="An intense boxing class to enhance strength and agility.">
+                  <h5>Boxing</h5>
+                  <span>Rachel Adam</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Karate" data-trainer="Donald Grey" data-description="A self-defense class teaching the basics of Karate.">
+                  <h5>Karate</h5>
+                  <span>Donald Grey</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Body Building" data-trainer="Robert Cage" data-description="A muscle-building session focusing on strength training and body sculpting.">
+                  <h5>Body Building</h5>
+                  <span>Robert Cage</span>
+                </td>
+                <td class="blank-td"></td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Yoga" data-trainer="Keaf Shen" data-description="A calming yoga session to improve flexibility and reduce stress.">
+                  <h5>Yoga</h5>
+                  <span>Keaf Shen</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Cardio" data-trainer="RLefew D. Loee" data-description="A high-energy cardio class to get your heart pumping and calories burning.">
+                  <h5>Cardio</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Fitness" data-trainer="Kimberly Stone" data-description="A full-body fitness class to improve overall strength and conditioning.">
+                  <h5>Fitness</h5>
+                  <span>Kimberly Stone</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="class-time">7.00pm - 9.00pm</td>
+                <td class="hover-dp ts-meta" data-title="Cardio" data-trainer="RLefew D. Loee" data-description="A high-energy cardio class to get your heart pumping and calories burning.">
+                  <h5>Cardio</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+                <td class="dark-bg blank-td"></td>
+                <td class="hover-dp ts-meta" data-title="Boxing" data-trainer="Rachel Adam" data-description="An intense boxing class to enhance strength and agility.">
+                  <h5>Boxing</h5>
+                  <span>Rachel Adam</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Yoga" data-trainer="Keaf Shen" data-description="A calming yoga session to improve flexibility and reduce stress.">
+                  <h5>Yoga</h5>
+                  <span>Keaf Shen</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Karate" data-trainer="Donald Grey" data-description="A self-defense class teaching the basics of Karate.">
+                  <h5>Karate</h5>
+                  <span>Donald Grey</span>
+                </td>
+                <td class="dark-bg hover-dp ts-meta" data-title="Boxing" data-trainer="Rachel Adam" data-description="An intense boxing class to enhance strength and agility.">
+                  <h5>Boxing</h5>
+                  <span>Rachel Adam</span>
+                </td>
+                <td class="hover-dp ts-meta" data-title="Weight Loss" data-trainer="RLefew D. Loee" data-description="A comprehensive weight loss program focusing on healthy diet and exercise.">
+                  <h5>WEIGHT LOSS</h5>
+                  <span>RLefew D. Loee</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-<!-- Footer Section End -->
+  <!-- Class Timetable Section End -->
 
+  <!-- Footer Section Begin -->
+  <section class="footer-section">
+    <div class="container-logo">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <a href="#"><img src="/Assets/Image/logo.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section End -->
 
+  <!-- JavaScript to handle click events -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const scheduleCells = document.querySelectorAll('.ts-meta');
+
+      scheduleCells.forEach(cell => {
+        cell.addEventListener('click', function() {
+          const title = cell.getAttribute('data-title');
+          const trainer = cell.getAttribute('data-trainer');
+          const description = cell.getAttribute('data-description');
+
+          alert(`Class: ${title}\nTrainer: ${trainer}\nDescription: ${description}`);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
