@@ -8,75 +8,73 @@
 </head>
 <body>
 
-
-    <!-- Navigation button start -->
-    <div class="navbar" id="myNavbar">
-        <!-- Logo on navigation button start -->
-        <div class="container-logo">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="fs-about">
-                        <div class="fa-logo">
-                            <img src="/Assets/Image/logo.png" alt="">
-                        </div>
-                    </div>
-                </div>
+  <!-- Navigation button start -->
+  <div class="navbar" id="myNavbar">
+    <!-- Logo on navigation button start -->
+    <div class="container-logo">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <img src="/Assets/Image/logo.png" alt="">
             </div>
+          </div>
         </div>
-        <!-- Logo on navigation button end -->
-
-        <div class="menu">
-            <a href="/Home.html">HOME</a>
-            <a href="/classes.html">CLASSES</a>
-            <a href="/Inventory.html">INVENTORY</a>
-            <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
-        </div>
-      
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+      </div>
     </div>
+    <!-- Logo on navigation button end -->
 
-    <script>
-        function toggleMenu() {
-            let navbar = document.getElementById("myNavbar");
-            navbar.classList.toggle("responsive");
-        }
-    </script>
-    <!-- Navigation button ends -->
+    <div class="menu">
+      <a href="/Home.html">HOME</a>
+      <a href="/classes.html">CLASSES</a>
+      <a href="/Inventory.html">INVENTORY</a>
+      <a href="/Assets/package.html">PACKAGES & TWEETUP</a>
+    </div>
+    
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      let navbar = document.getElementById("myNavbar");
+      navbar.classList.toggle("responsive");
+    }
+  </script>
+  <!-- Navigation button ends -->
 
   <div class="container1">
     <h1>Membership Packages</h1>
     <div class="packages">
-        <div class="package silver">
-            <div class="package-header">
-                <h2>Silver Package</h2>
-            </div>
-            <div class="package-body">
-                <p>Price: 50,000Tsh/= </p>
-                <p>Duration: 1 month</p>
-                <!-- Add data attributes for package information -->
-                <button class="purchase-btn" onclick="redirectToTransaction('Silver')">Purchase Now</button>
-            </div>
+      <div class="package silver">
+        <div class="package-header">
+          <h2>Silver Package</h2>
         </div>
-        <div class="package diamond">
-            <div class="package-header">
-                <h2>Diamond Package</h2>
-            </div>
-            <div class="package-body">
-                <p>Price: 150,000Tsh/= </p>
-                <p>Duration: 3 months</p>
-                <button class="purchase-btn" onclick="redirectToTransaction('Diamond')">Purchase Now</button>
-            </div>
+        <div class="package-body">
+          <p>Price: 50,000Tsh/= </p>
+          <p>Duration: 1 month</p>
+          <button class="purchase-btn" onclick="redirectToTransaction('Silver')">Purchase Now</button>
         </div>
-        <div class="package gold">
-            <div class="package-header">
-                <h2>Gold Package</h2>
-            </div>
-            <div class="package-body">
-                <p>Price: 300,000Tsh/= </p>
-                <p>Duration: 6 months</p>
-                <button class="purchase-btn" onclick="redirectToTransaction('Gold')">Purchase Now</button>
-            </div>
+      </div>
+      <div class="package diamond">
+        <div class="package-header">
+          <h2>Diamond Package</h2>
         </div>
+        <div class="package-body">
+          <p>Price: 150,000Tsh/= </p>
+          <p>Duration: 3 months</p>
+          <button class="purchase-btn" onclick="redirectToTransaction('Diamond')">Purchase Now</button>
+        </div>
+      </div>
+      <div class="package gold">
+        <div class="package-header">
+          <h2>Gold Package</h2>
+        </div>
+        <div class="package-body">
+          <p>Price: 300,000Tsh/= </p>
+          <p>Duration: 6 months</p>
+          <button class="purchase-btn" onclick="redirectToTransaction('Gold')">Purchase Now</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -99,65 +97,8 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Sarah Lee', '+255 753 131 868', 'Boxing Trainer')">
-          <img src="/Assets/Image/team/team-1.jpg" alt="Trainer 1">
-          <div class="overlay">
-            <div class="text">Sarah Lee</div>
-            <div class="subtext">Boxing Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Annah McDon', '+255 623 136 132', 'Yoga Trainer')">
-          <img src="/Assets/Image/team/team-2.jpg" alt="Trainer 2">
-          <div class="overlay">
-            <div class="text">Annah McDon</div>
-            <div class="subtext">Yoga Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Jane Smith', '+255 629 880 938', 'Body-Builder & Karate Trainer')">
-          <img src="/Assets/Image/team/team-3.jpg" alt="Trainer 3">
-          <div class="overlay">
-            <div class="text">Jane Smith</div>
-            <div class="subtext">Body-Builder & Karate Trainer</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Mike Johnson', '+255 715 700 411', 'Fitness Trainer')">
-          <img src="/Assets/Image/team/team-4.jpg" alt="Trainer 4">
-          <div class="overlay">
-            <div class="text">Mike Johnson</div>
-            <div class="subtext">Fitness Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Emily Davis', '+255 743 330 569', 'Yoga Trainer')">
-          <img src="/Assets/Image/team/team-5.jpg" alt="Trainer 5">
-          <div class="overlay">
-            <div class="text">Emily Davis</div>
-            <div class="subtext">Yoga Trainer</div>
-          </div>
-        </a>
-      </div>
-      <div class="card">
-        <a href="#" class="trainer-link" onclick="openTrainerForm('Alex Brown', '+255 717 275 260', 'Cardio Trainer')">
-          <img src="/Assets/Image/team/team-6.jpg" alt="Trainer 6">
-          <div class="overlay">
-            <div class="text">Alex Brown</div>
-            <div class="subtext">Cardio Trainer</div>
-          </div>
-        </a>
-      </div>
-    </div>
+  <div class="container" id="trainersContainer">
+    <!-- Trainers will be loaded dynamically here -->
   </div>
   <!-- Trainers section End -->
 
@@ -189,23 +130,124 @@
     </div>
   </div>
 
-  <!-- Logo -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="fs-about">
-          <div class="fa-logo">
-            <img src="/Assets/Image/logo.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- JavaScript and Firebase SDK -->
+  <script type="module">
+    // Firebase SDK imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onValue, get } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
+      authDomain: "gym-membership-3881e.firebaseapp.com",
+      databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
+      projectId: "gym-membership-3881e",
+      storageBucket: "gym-membership-3881e.appspot.com",
+      messagingSenderId: "342224120014",
+      appId: "1:342224120014:web:0318e246d79e335ec2889f"
+    };
 
-  <!-- JavaScript -->
-  <script>
-    // JavaScript code
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+
+    // Function to load trainers
+    function loadTrainers() {
+      const trainersRef = ref(database, 'trainers');
+      onValue(trainersRef, (snapshot) => {
+        const trainersContainer = document.getElementById('trainersContainer');
+        trainersContainer.innerHTML = ''; // Clear the container
+        snapshot.forEach((childSnapshot) => {
+          const trainer = childSnapshot.val();
+          const trainerCard = `
+            <div class="card">
+              <a href="#" class="trainer-link" onclick="openTrainerForm('${trainer.name}', '${trainer.phone}', '${trainer.role}')">
+                <img src="${trainer.imageURL}" alt="Trainer">
+                <div class="overlay">
+                  <div class="text">${trainer.name}</div>
+                  <div class="subtext">${trainer.role}</div>
+                </div>
+              </a>
+            </div>
+          `;
+          trainersContainer.innerHTML += trainerCard;
+        });
+      });
+    }
+
+    // Load trainers on page load
+    window.addEventListener('DOMContentLoaded', loadTrainers);
+
+    // Save trainers to Firebase when the page loads
+    document.addEventListener("DOMContentLoaded", function() {
+      const trainersRef = ref(database, 'trainers');
+      get(trainersRef).then((snapshot) => {
+        if (!snapshot.exists()) {
+          const trainers = [
+            {
+              name: 'Sarah Lee',
+              phone: '+255 753 131 868',
+              role: 'Boxing Trainer',
+              imageURL: '/Assets/Image/team/team-1.jpg'
+            },
+            {
+              name: 'Annah McDon',
+              phone: '+255 623 136 132',
+              role: 'Yoga Trainer',
+              imageURL: '/Assets/Image/team/team-2.jpg'
+            },
+            {
+              name: 'Jane Smith',
+              phone: '+255 629 880 938',
+              role: 'Body-Builder & Karate Trainer',
+              imageURL: '/Assets/Image/team/team-3.jpg'
+            },
+            {
+              name: 'Mike Johnson',
+              phone: '+255 715 700 411',
+              role: 'Fitness Trainer',
+              imageURL: '/Assets/Image/team/team-4.jpg'
+            },
+            {
+              name: 'Emily Davis',
+              phone: '+255 743 330 569',
+              role: 'Yoga Trainer',
+              imageURL: '/Assets/Image/team/team-5.jpg'
+            },
+            {
+              name: 'Alex Brown',
+              phone: '+255 717 275 260',
+              role: 'Cardio Trainer',
+              imageURL: '/Assets/Image/team/team-6.jpg'
+            }
+          ];
+
+          trainers.forEach((trainer) => {
+            saveTrainer(trainer.name, trainer.phone, trainer.role, trainer.imageURL);
+          });
+        }
+      }).catch((error) => {
+        console.error('Error checking trainers:', error);
+      });
+    });
+
+    // Function to save trainer data to Firebase
+    function saveTrainer(name, phone, role, imageURL) {
+      const trainersRef = ref(database, 'trainers');
+      push(trainersRef, {
+        name: name,
+        phone: phone,
+        role: role,
+        imageURL: imageURL
+      }).then(() => {
+        console.log('Trainer saved successfully:', name);
+      }).catch((error) => {
+        console.error('Error saving trainer:', error);
+      });
+    }
+
     // Define the openTrainerForm function
     function openTrainerForm(name, phoneNumber, role) {
       // Set trainer's name and phone number in hidden inputs and display inputs
@@ -244,80 +286,6 @@
       // For now, let's just close the modal
       modal.style.display = "none";
       alert("Appointment booked!");
-    });
-  </script>
-
-  <script type="module">
-    // Import the functions you need from the Firebase SDKs
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
-
-    // Your Firebase project configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
-      authDomain: "gym-membership-3881e.firebaseapp.com",
-      databaseURL: "https://gym-membership-3881e-default-rtdb.firebaseio.com",
-      projectId: "gym-membership-3881e",
-      storageBucket: "gym-membership-3881e.appspot.com",
-      messagingSenderId: "342224120014",
-      appId: "1:342224120014:web:0318e246d79e335ec2889f"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app); // Initialize the authentication module
-    const database = getDatabase();
-
-    function saveTrainer(name, phone, role) {
-      const trainersRef = ref(database, 'trainers');
-      push(trainersRef, {
-        name: name,
-        phone: phone,
-        role: role,
-      }).then(() => {
-        console.log('Trainer saved successfully!');
-      }).catch((error) => {
-        console.error('Error saving trainer:', error);
-      });
-    }
-
-    // Function to load trainers
-    function loadTrainers() {
-      const trainersRef = ref(database, 'trainers');
-      onValue(trainersRef, (snapshot) => {
-        const trainersContainer = document.getElementById('trainersContainer');
-        trainersContainer.innerHTML = ''; // Clear the container
-        snapshot.forEach((childSnapshot) => {
-          const trainer = childSnapshot.val();
-          const trainerCard = `
-            <div class="card">
-              <a href="#" class="trainer-link" onclick="openTrainerForm('${trainer.name}', '${trainer.phone}', '${trainer.role}')">
-                <img src="${trainer.imageUrl}" alt="Trainer">
-                <div class="overlay">
-                  <div class="text">${trainer.name}</div>
-                  <div class="subtext">${trainer.role}</div>
-                </div>
-              </a>
-            </div>
-          `;
-          trainersContainer.innerHTML += trainerCard;
-        });
-      });
-    }
-
-    // Load trainers on page load
-    window.addEventListener('DOMContentLoaded', loadTrainers);
-
-    
-    // Save trainers to Firebase when the page loads
-    document.addEventListener("DOMContentLoaded", function() {
-      saveTrainer('Sarah Lee', '+255 753 131 868', 'Boxing Trainer');
-      saveTrainer('Annah McDon', '+255 623 136 132', 'Yoga Trainer');
-      saveTrainer('Jane Smith', '+255 629 880 938', 'Body-Builder & Karate Trainer');
-      saveTrainer('Mike Johnson', '+255 715 700 411', 'Fitness Trainer');
-      saveTrainer('Emily Davis', '+255 743 330 569', 'Yoga Trainer');
-      saveTrainer('Alex Brown', '+255 717 275 260', 'Cardio Trainer');
     });
 
   </script>

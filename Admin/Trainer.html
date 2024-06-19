@@ -14,6 +14,7 @@
         <th>Name</th>
         <th>Phone</th>
         <th>Role</th>
+        <th>Image URL</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -30,6 +31,8 @@
     <input type="text" id="newTrainerPhone" required>
     <label for="newTrainerRole">Role:</label>
     <input type="text" id="newTrainerRole" required>
+    <label for="newTrainerImage">Image URL:</label>
+    <input type="text" id="newTrainerImage" required>
     <button type="submit">Add Trainer</button>
   </form>
 
@@ -66,8 +69,9 @@
               <td>${trainer.name}</td>
               <td>${trainer.phone}</td>
               <td>${trainer.role}</td>
+              <td>${trainer.imageURL}</td>
               <td>
-                <button onclick="editTrainer('${childSnapshot.key}', '${trainer.name}', '${trainer.phone}', '${trainer.role}')">Edit</button>
+                <button onclick="editTrainer('${childSnapshot.key}', '${trainer.name}', '${trainer.phone}', '${trainer.role}', '${trainer.imageURL}')">Edit</button>
                 <button onclick="deleteTrainer('${childSnapshot.key}')">Delete</button>
               </td>
             </tr>
@@ -86,6 +90,7 @@
       const newTrainerName = document.getElementById('newTrainerName').value;
       const newTrainerPhone = document.getElementById('newTrainerPhone').value;
       const newTrainerRole = document.getElementById('newTrainerRole').value;
+      const newTrainerImage = document.getElementById('newTrainerImage').value;
 
       const trainersRef = ref(database, 'trainers');
       const newTrainerRef = push(trainersRef);
@@ -93,6 +98,7 @@
         name: newTrainerName,
         phone: newTrainerPhone,
         role: newTrainerRole,
+        imageURL: newTrainerImage
       }).then(() => {
         console.log('Trainer added successfully!');
         // Clear form inputs
@@ -105,17 +111,19 @@
     });
 
     // Edit trainer
-    window.editTrainer = function(key, name, phone, role) {
+    window.editTrainer = function(key, name, phone, role, imageURL) {
       const newName = prompt("Enter new name:", name);
       const newPhone = prompt("Enter new phone:", phone);
       const newRole = prompt("Enter new role:", role);
+      const newImageURL = prompt("Enter new image URL:", imageURL);
 
-      if (newName && newPhone && newRole) {
+      if (newName && newPhone && newRole && newImageURL) {
         const trainerRef = ref(database, 'trainers/' + key);
         update(trainerRef, {
           name: newName,
           phone: newPhone,
           role: newRole,
+          imageURL: newImageURL
         }).then(() => {
           console.log('Trainer updated successfully!');
           loadTrainers();
