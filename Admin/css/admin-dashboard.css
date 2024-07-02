@@ -54,7 +54,7 @@ nav ul li {
 }
 
 nav ul li button {
-  background-color: #4CAF50;
+  background-color: #c9931e;
   border: none;
   padding: 1rem;
   color: white;
@@ -64,7 +64,7 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-  background-color: #45a049;
+  background-color: #c4510f;
 }
 
 .section-container {

@@ -74,9 +74,9 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-    background-color: #28a745;
+    background-color: #746539;
 }
 
 button[type="submit"]:hover {
-    background-color: #be9b32;
+    background-color: #df720c;
 }

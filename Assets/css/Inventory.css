@@ -133,9 +133,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensure navigation bar is above other content */
+  z-index: 1000; 
   width: 100%;
-  transition: top 0.3s; /* Add transition effect for smooth appearance */
+  transition: top 0.3s;
 }
 
 .container-logo {
@@ -181,7 +181,7 @@ body {
     flex-direction: column;
     background-color: #1a1a1a;
     position: absolute;
-    top: 100%; /* Adjust as needed */
+    top: 100%; 
     left: 0;
     right: 0;
   }
@@ -191,96 +191,9 @@ body {
   }
 }
 
-/* Additional CSS for the main content of the webpage */
+
 .main-content {
-  margin-top: 100px; /* Ensure content starts below the navigation bar */
-  padding: 20px; /* Add padding for better readability */
+  margin-top: 100px; 
+  padding: 20px; 
 }
 
-
-/*
-<!-- first three card implementation start -->
-<div class="container">
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/Dumbbells.jpg">
-        </div>
-        <div class="content">
-            <h1>Dumbbells</h1>
-            <p class="item-count">Items Available: 20</p> <!-- New line added for item count -->
-            <p>Handheld weights perfect for strength training. Ideal for exercises like bicep curls,
-            shoulder presses, and lunges.
-            </p>
-        </div>
-    </div>
-        <!--card one ends-->
-
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/Barbell.jpg">
-        </div>
-        <div class="content">
-            <h1>Barbell</h1>
-            <p class="item-count">Items Available: 35</p> <!-- New line added for item count -->
-            <p>ideal for compound exercises like squats, deadlifts, and bench presses. Essential for building strength and muscle mass
-            </p>
-        </div>
-    </div>
-    <!--card two ends-->
-
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/Running_Machine.jpg">
-        </div>
-        <div class="content">
-            <h1>Running Machine</h1>
-            <p class="item-count">Items Available: 10</p> <!-- New line added for item count -->
-            <p>Essential cardio equipment that simulates walking. Perfect for improving cardiovascular health
-            </p>
-        </div>
-    </div>
-    <!--card three end-->
-</div>
-
-<!--seecond three cards implementation-->
-<div class="container">
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/cable_machines.jpg">
-        </div>
-        <div class="content">
-            <h1>Cable Machine</h1>
-            <p class="item-count">Items Available: 8</p> <!-- New line added for item count -->
-            <p>Versatile strength training equipment using adjustable cables. Ideal for targeting multiple muscle groups with controlled movements
-            </p>
-        </div>
-    </div>
-        <!--card one ends-->
-
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/Bench_press.jpg">
-        </div>
-        <div class="content">
-            <h1>Bench Press</h1>
-            <p class="item-count">Items Available: 12</p> <!-- New line added for item count -->
-            <p>Essential for upper body strength training. Perfect for exercises targeting the chest, shoulders, and triceps using a barbell or dumbbells
-            </p>
-        </div>
-    </div>
-    <!--card two ends-->
-
-    <div class="card">
-        <div class="imgBx">
-            <img src="/Assets/Image/Leg_Machine.jpg">
-        </div>
-        <div class="content">
-            <h1>Leg Machine</h1>
-            <p class="item-count">Items Available: 15</p> <!-- New line added for item count -->
-            <p>Designed to target and strengthen the muscles of the lower body, including quads, hamstrings, and calves. Ideal for leg extensions, curls, and presses.
-            </p>
-        </div>
-    </div>
-    <!--card three end-->
-</div>
-<!--end of card implementation card-->

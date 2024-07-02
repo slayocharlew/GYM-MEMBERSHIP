@@ -8,14 +8,14 @@ body {
   
   h1, h2 {
     text-align: center;
-    color: #ffffff;
+    color: #ffc107;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #1e1e1e;
+    background-color: #99883f;
     color: #e0e0e0;
   }
   
@@ -67,17 +67,17 @@ body {
   }
   
   form button {
-    background-color: #4CAF50;
+    background-color: #c99b1f;
     color: white;
     border: none;
   }
   
   form button:hover {
-    background-color: #45a049;
+    background-color: #b87614;
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #a88629;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -87,7 +87,7 @@ body {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #a75f1b;
   }
   
   img {

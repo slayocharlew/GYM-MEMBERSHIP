@@ -134,14 +134,12 @@ h1 {
       flex-direction: column;
       background-color: #1a1a1a;
       position: absolute;
-      top: 100%; /* Adjust as needed */
+      top: 100%; 
       left: 0;
       right: 0;
     }
-  
+
     .navbar.responsive .menu a {
       padding: 10px 20px;
     }
   }
-
-
