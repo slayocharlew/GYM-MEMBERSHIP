@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
+  <title>Profile Information</title>
   <link rel="stylesheet" href="/Assets/css/profile.css">
+  <link rel="icon" href="/Assets/Image/dumb.jpg" type="image/icon type">
+ 
 </head>
 <body>
 
@@ -21,35 +23,35 @@
     </div>
   </div>
 
-  <div class="profile-container">
+  <div class="container">
     <h1>User Profile</h1>
-    <form id="profileForm">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <div class="profile-info">
+      <div>
+        <span>Username:</span>
+        <span id="username"></span>
       </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <div>
+        <span>Email:</span>
+        <span id="email"></span>
       </div>
-      <div class="form-group">
-        <label for="package">Current Package:</label>
-        <input type="text" id="package" name="package" disabled>
+      <div>
+        <span>Current Package:</span>
+        <span id="package"></span>
       </div>
-      <div class="form-group">
-        <label for="expiration">Expiration Date:</label>
-        <input type="text" id="expiration" name="expiration" disabled>
+      <div>
+        <span>Expiration Date:</span>
+        <span id="expiration"></span>
       </div>
-      <button type="submit">Update Profile</button>
-    </form>
+    </div>
   </div>
 
   <script type="module">
+    // Import the functions you need from the Firebase SDKs
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-    import { getDatabase, ref, get, update } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
-    /* import SDk's requirement in */ 
+    // Your Firebase project configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCGEZ-movg4KhXJO0PFCnLFyy-zYxKx6yw",
       authDomain: "gym-membership-3881e.firebaseapp.com",
@@ -60,16 +62,15 @@
       appId: "1:342224120014:web:0318e246d79e335ec2889f"
     };
 
-    /*Initialization web application */
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const database = getDatabase(app);
 
-    const profileForm = document.getElementById('profileForm');
-    const usernameInput = document.getElementById('username');
-    const emailInput = document.getElementById('email');
-    const packageInput = document.getElementById('package');
-    const expirationInput = document.getElementById('expiration');
+    const usernameSpan = document.getElementById('username');
+    const emailSpan = document.getElementById('email');
+    const packageSpan = document.getElementById('package');
+    const expirationSpan = document.getElementById('expiration');
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -79,32 +80,22 @@
         get(userRef).then((snapshot) => {
           if (snapshot.exists()) {
             const userData = snapshot.val();
-            usernameInput.value = userData.username || '';
-            emailInput.value = userData.email || '';
-            if (userData.selectedPackage) {
-              packageInput.value = userData.selectedPackage.type || 'No package';
-              expirationInput.value = userData.selectedPackage.expirationDate || 'N/A';
+            usernameSpan.textContent = userData.username || 'N/A';
+            emailSpan.textContent = userData.email || 'N/A';
+            if (userData.transactions) {
+              // Assuming there's only one transaction per user
+              const transaction = Object.values(userData.transactions)[0];
+              packageSpan.textContent = transaction.packageType || 'No package';
+              expirationSpan.textContent = new Date(transaction.expirationDate).toLocaleDateString() || 'N/A';
             } else {
-              packageInput.value = 'No package';
-              expirationInput.value = 'N/A';
+              packageSpan.textContent = 'No package';
+              expirationSpan.textContent = 'N/A';
             }
           } else {
             console.log("No data available");
           }
         }).catch((error) => {
           console.error('Error fetching user data:', error);
-        });
-
-        profileForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          update(userRef, {
-            username: usernameInput.value,
-            email: emailInput.value
-          }).then(() => {
-            alert('Profile updated successfully!');
-          }).catch((error) => {
-            console.error('Error updating profile:', error);
-          });
         });
       } else {
         window.location.href = '/log-in.html';
