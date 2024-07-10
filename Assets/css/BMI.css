@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+:root {
+  --background-color: #121212;
+  --text-color: #FFFFFF;
+  --vigo-color: #df8f16;
+  --slider-color: #A3A3A3;
+  --input-number-color: #333333;
+  --card-background-color: #1E1E1E;
+  --box-shadow-color: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-bottom: 0.9em;
+  color: var(--text-color);
+}
+
+html,
+body {
+  height: 100%; 
+  width: 100%;
+  margin: 0; 
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bmi-calculator {
+  border: 5px solid var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0px 48px 100px var(--box-shadow-color);
+  padding: 3em;
+  margin: 2em;
+  height: 520px;
+  background-color: var(--card-background-color);
+}
+
+.bmi-calculator-weight, .bmi-calculator-height {
+  margin-bottom: 2.2em;
+  width: 100%;
+}
+
+.weight-slider, .height-slider {
+  width: 100%;
+  height: 1px;
+  border-radius: 10px;
+  background: var(--slider-color);
+  outline: none;
+}
+
+input[type=range] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2.5px solid var(--vigo-color);
+  height: 20px;
+  width: 20px;
+  border-radius: 40px;
+  background: var(--card-background-color);
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 2.5px solid var(--vigo-color);
+  height: 20px;
+  width: 20px;
+  border-radius: 40px;
+  background: var(--card-background-color);
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  border: 2.5px solid var(--vigo-color);
+  height: 20px;
+  width: 20px;
+  border-radius: 40px;
+  background: var(--card-background-color);
+  cursor: pointer;
+}
+
+input[type=number] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: var(--input-number-color);
+  border-style: none;
+  height: 30px;
+  width: 60px;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+input[type=number]:focus {
+  outline: none;
+}
+
+.gumb {
+  text-align: center;
+  font-size: 1em;
+  color: var(--text-color);
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 11px 32px;
+  transition: .2s;
+  border: none;
+  background-color: var(--vigo-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.gumb:hover {
+  opacity: .8;
+}
+
+@media only screen and (max-width: 325px) {
+  .bmi-calculator {
+    height: 560px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+
+/* css for navgation start*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #050000;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure navigation bar is above other content */
+  width: 100%;
+  transition: top 0.3s; /* Add transition effect for smooth appearance */
+}
+
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  background-color: #dfb80e;
+  color: black;
+}
+
+.navbar .logo {
+  flex: 1;
+}
+
+.navbar .menu {
+  display: flex;
+}
+
+.navbar.responsive .menu {
+  display: block;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .icon {
+      display: block;
+      cursor: pointer;
+  }
+
+  .navbar .menu {
+      display: none;
+  }
+
+  .navbar.responsive .menu {
+      display: flex;
+      flex-direction: column;
+      background-color: #1a1a1a;
+      position: absolute;
+      top: 15%;
+      left: 0;
+      right: 0;
+  }
+
+  .navbar.responsive .menu a {
+      padding: 10px 20px;
+      /* text-align: center; */
+  }
+}
+
+/*css for navgation end*/
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
